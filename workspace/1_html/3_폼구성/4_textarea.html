@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textarea tag</title>
+    <style>
+        input{
+          margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <textarea name="content" id="content" cols="30" rows="30">값을 입력해봐</textarea> -->
+
+    <!-- 실습 -->
+    <fieldset>
+        <legend>게시판 글쓰기</legend>
+        제목<input type="text">
+        <br>
+        본문<textarea></textarea>
+    </fieldset>
+        <!-- 실습 -->
+        <form action="#" method="post">
+            <fieldset>
+              <legend>게시판 글쓰기</legend>
+              <p>
+                <label for="title">제목
+                  <input type="text" id="title" name="title">
+                </label>
+              </p>
+              <p>
+                <label for="content">본문
+                  <textarea id="content" name="content"></textarea>
+                </label>
+              </p>
+            </fieldset>
+          </form>
+</body>
+</html>

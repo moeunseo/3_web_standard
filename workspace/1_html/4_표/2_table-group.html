@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tablegroup</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        th,  td{
+            border: 2px solid;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <!-- 제목 -->
+        <col style="width: 120px;">
+        <colgroup span="2" style="width: 300px;"></colgroup>
+        <col style="width: 80px;">
+        <caption>학생 관리 프로그램</caption>
+        <tr> <!-- 열 -->
+            <th>번호</th>
+            <th>학생명</th>
+            <th>점수</th>
+            <th>학점</th>
+        </tr>
+        <tr> <!-- 행 시작 -->
+            <td>1</td>
+            <td>모은서</td>
+            <td>100</td>
+            <td rowspan="2">A</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>박지민</td>
+            <td>96</td>
+            <!-- <td>A</td> -->
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>이창섭</td>
+            <td>80</td>
+            <td>B</td>
+        </tr>
+        <tfoot>
+            <tr>
+                <td colspan="2">학생 정보</td>
+                <td colspan="2">학생 성적</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

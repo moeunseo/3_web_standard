@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table scope</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        th,  td{
+            border: 2px solid;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>학생 성정 프로그램</caption>
+        <tr>
+            <th scope="col">구분</th>
+            <th scope="col">중간고사</th>
+            <th scope="col">기말고사</th>
+        </tr>
+        <tr>
+            <th scope="row">국어</th>
+            <td>100</td>
+            <td>90</td>
+        </tr>
+        <tr>
+            <th scope="row">수학</th>
+            <td>95</td>
+            <td>90</td>
+        </tr>
+    </table>
+</body>
+</html>
