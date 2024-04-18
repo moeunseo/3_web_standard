@@ -1,0 +1,5 @@
+vscode에서 github로 폴더 및 파일 반영 시
+터미널 열어서 진행
+git add .
+커밋 버튼 누르기 전에 꼭 메세지 입력해야 로딩 안뜸
+후에 git push origin main하면 끝!
