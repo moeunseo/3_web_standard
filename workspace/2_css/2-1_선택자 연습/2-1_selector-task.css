@@ -1,0 +1,36 @@
+.classtag{
+    color: blueviolet;
+}
+
+table {
+    width: 50%;
+    border-collapse: collapse;
+    margin: 20px;
+}
+
+th, td {
+    border: 1px solid #333;
+    padding: 8px;
+    text-align: center;
+}
+
+.idName{
+    text-align: right;
+}
+
+.classStyle{
+    font-size: 25px;
+    color: rebeccapurple;
+}
+
+#genderW{
+    font-style: italic;
+    font-weight: bold;
+    color: pink;
+}
+
+#genderM{
+    font-style: italic;
+    font-weight: bold;
+    color: blue;
+}
