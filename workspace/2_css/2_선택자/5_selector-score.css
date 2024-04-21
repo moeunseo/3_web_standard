@@ -1,0 +1,14 @@
+.class2{  /* .class1 > .class2를 주지 않아도 알아서 적용된다. */
+    color: brown;
+}
+
+/* 보통 마지막으로 읽힌 스타일이 지정되지만 id의 우선순위가 더 높기 때문에 
+    id로 지정한 스타일이 적용된다.
+*/
+#id{
+    color: orange;
+ }
+
+.class{
+    color: tomato;
+}
