@@ -1,0 +1,26 @@
+.margin, .padding{
+    width: 200px;
+    background-color: aqua;
+    text-align: center;
+    border: 2px solid blue;
+}
+
+.margin{
+    margin-bottom: 15px;
+}
+
+.padding{
+    padding: 10px;
+}
+
+/* 전체 크기를 width와 height로 조절할 수 있고, border까지 설정된 크기가 되면서
+	content부분이 상대적으로 줄어들거나 늘어난다.
+ */
+.box{
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border: 2px solid black;
+    margin: 10px;
+    box-sizing: border-box;
+}

@@ -1,0 +1,31 @@
+/* 기본 폰트 사이즈 설정 */
+html{
+    font-size: 16px;
+}
+
+/* 상위 요소 폰트 사이즈 */
+.container{
+    font-size: 30px;
+}
+
+/* container에서 상속받은 크기에 따른 상대 크기 30*2 = 60px */
+.em{
+    font-size: 2em;
+}
+
+/* html에서 상속받은 크기에 따른 상대크기 16*2 = 32px */
+.rem{
+    font-size: 2rem;
+}
+
+.view{
+    width: 50vw;
+    height: 20vh;
+    background-color: violet;
+    font-size: 2vh; /* 폰트 크기가 높이에 2프로 */
+}
+
+.percent{
+    width: 80%;
+    background-color: red;
+}
