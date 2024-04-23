@@ -1,0 +1,63 @@
+body {
+    font-size: 50px;
+    margin: 0;
+    color: white;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "sidebar content content"
+        "footer footer footer";
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
+#header{
+    grid-area: header;
+    background-color: greenyellow;
+    text-align: center;
+}
+
+#sidebar{
+    grid-area: sidebar;
+    background-color: silver;
+    text-align: center;
+}
+
+.content {
+    grid-area: content;
+    /* grid로 content 안에 블록 요소 나누기 */
+    display: grid;
+    grid-template-columns: 1px;
+    grid-gap: 10px;
+    padding: 20px;
+
+    /* flex로 content 안에 블록 요소 나누기 */
+   /*  display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*flex-wrap: wrap;*/
+    /* gap: 10px; 
+    justify-content: space-around; */
+}
+
+.card {
+    background-color: deepskyblue;
+    width: 900px;
+    text-align: center;
+
+   /* 수직도 정렬 */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+#footer{
+    grid-area: footer;
+    background-color: pink;
+    text-align: center;
+}

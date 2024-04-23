@@ -21,6 +21,7 @@
     height: 100px;
     padding: 10px;
     border: 2px solid black;
+    border-radius: 8px; /* 각져있는 것을 동그랗게 만들어짐 */
     margin: 10px;
     box-sizing: border-box;
 }

@@ -1,0 +1,35 @@
+.inline{
+    display: inline;
+    background-color: pink;
+    width: 100px;/* 인라인 요소이기때문에 너비를 주더라도 먹지 않는다. */
+}
+
+.block{
+    display: block;
+    background-color: blue;
+}
+
+.inline-block{
+    display: inline-block;
+    background-color: red;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+}
+
+.none{
+    display: none;
+}
+
+.msg{
+    display: none;
+    background-color: silver;
+    padding: 20px;
+    margin-top: 10px;
+    text-align: center;
+    color: brown;
+}
+
+.hover-button:hover + .msg{
+    display: block;
+}
