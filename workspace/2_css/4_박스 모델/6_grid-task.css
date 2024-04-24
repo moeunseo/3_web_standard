@@ -34,6 +34,7 @@ body {
     display: grid;
     grid-template-columns: 1px;
     grid-gap: 10px;
+    align-items: center;
     padding: 20px;
 
     /* flex로 content 안에 블록 요소 나누기 */
@@ -60,4 +61,17 @@ body {
     grid-area: footer;
     background-color: pink;
     text-align: center;
+}
+
+@media(max-width: 1200px){
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "content"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+    }
 }

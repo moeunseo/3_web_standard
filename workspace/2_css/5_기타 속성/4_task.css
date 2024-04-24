@@ -1,0 +1,58 @@
+html{
+    background-color:violet;
+}
+
+.loginpage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-top: 105px;
+}
+
+form {
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 300px;
+    border-radius: 5px;
+    padding: 40px;
+    /* 양수가 오른쪽, 양수가 아래쪽, 흐림 정도, 번짐 정도, 색 */
+    box-shadow: 2px 4px 10px 10px rgba(0,0,0,0.1);
+}
+
+input{
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid lightgray;
+}
+
+.loginbutton{
+    box-sizing: border-box;
+    background-color: slateblue;
+    padding: 10px;
+    border: 1px solid lightgray;
+    color: white;
+    border: none;
+}
+
+.loginbutton:hover{
+    background-color: tomato;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    text-decoration: underline;
+    /* 마우스가 태그 위에 올라갈 시 모양이 바뀐다! */
+    cursor: pointer;
+}
