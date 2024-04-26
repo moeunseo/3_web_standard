@@ -7,43 +7,53 @@
     <link rel="stylesheet" href="2_login.css">
 </head>
 <body>
-    <div class="loginwrapper">
-        <div class="loginlogo">
-            <div>
-                <span>위시켓의 다양한 서비스를</span>
-                <br>
-                <span>하나의 계정으로!</span>
-            </div>
-            <img alt="wishket-welcome" class="wishket-welcome" src="images/wishket-welcome.svg">
-        </div>    
+    <div class="loginpage">
+        <div class="loginwrapper">
+            <div class="loginlogo">
+                <div>
+                    <span>위시켓의 다양한 서비스를</span>
+                    <br>
+                    <span>하나의 계정으로!</span>
+                </div>
+                <img alt="wishket-welcome" class="wishket-welcome" src="images/wishket-welcome.svg">
+            </div>    
 
-        <div class="login-section">
-            <h1>로그인</h1>
-            <div>
-                <form action="#" id="text-bar">
-                    <input type="text" placeholder="아이디 또는 이메일">
-                    <input type="password" placeholder="비밀번호">
-                    <div class="midde-bar">
-                        <input type="checkbox">
-                        <span>로그인 상태 유지</span>
-                        <a href="#">비밀번호 찾기</a>
-                    </div>
-                    <button type="button">로그인</button>
-                    <div>
-                        <img src="images/goole.png">
-                        <button type="button">구글로 로그인</button>
-                    </div>
-                    <div>
-                        <img src="images/facebook.png">
-                        <button type="button">페이스북으로 로그인</button>
-                    </div>
-                    <div class="join">
-                        <span>아직 위시켓 통합회원이 아니신가요?</span>
-                        <a href="#">회원가입</a>
-                    </div>
-                </form>
-            </div>
+            <div class="login-section">
+                <h1>로그인</h1>
+                <div>
+                    <form action="#" id="text-bar">
+                        <input class="input-box" id="input-text" type="text" placeholder="아이디 또는 이메일">
+                        <input class="input-box" type="password" placeholder="비밀번호">
+                        <i class="pwd-image">
+                            <img src="images/icon_input_eye.png">
+                        </i>
+                        <div class="midde-bar">
+                            <div class="login-checkbox">
+                                <input class="cursor" type="checkbox">
+                                <span class="cursor">로그인 상태 유지</span>
+                            </div>
+                            <div class="pwd-find">
+                                <a href="#">비밀번호 찾기</a>
+                            </div>
+                        </div>
+                        <button class="btn" id="submitlogin" type="button">로그인</button>
+                        <div class="social-login">
+                            <div class="or">또는</div>
+                            <div class="login-btn">
+                                <button class="btn" type="button"><a class="logo-position" href="#"><img class="logo" id="google-logo" src="images/goole.png">구글로 로그인</button></a>
+                            </div>
+                            <div class="login-btn">
+                                <button class="btn" type="button"><a class="logo-position" href="#"><img class="logo" id="facebook-logo" src="images/facebook.png">페이스북으로 로그인</button></a>
+                            </div>
+                        </div>
+                        <div class="join">
+                            <span>아직 위시켓 통합회원이 아니신가요?</span>
+                            <a href="#">회원가입</a>
+                        </div>
+                    </form>
+                </div>
 
+            </div>
         </div>
     </div>
 </body>
