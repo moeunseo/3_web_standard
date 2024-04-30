@@ -149,7 +149,10 @@ a{
 /* 구글, 페이스북 로그인 버튼 */
 .login-btn{
     display: flex;
-    margin: 10px;
+    justify-content: space-around;
+    margin-right: -10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
 }
 
 .login-btn a{

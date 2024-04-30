@@ -103,6 +103,10 @@ span{
     font-size: 14px;
 }
 
+#agree{
+    margin-left: -5px;
+}
+
 .cursor{
     cursor: pointer;
     color: black;
@@ -157,10 +161,13 @@ a{
     margin-bottom: 30px;
 }
 
-/* 구글, 페이스북 로그인 버튼 */
+/* 구글, 페이스북 회원가입 버튼 */
 .join-btn{
     display: flex;
-    margin: 10px;
+    justify-content: space-around;
+    margin-right: -10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
 }
 
 .join-btn a{

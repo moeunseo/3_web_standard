@@ -27,6 +27,8 @@
 // console.log(`함수 밖 temp1: ${temp1}`)
 // console.log(`함수 밖 temp2: ${temp2}`)
 
+
+// var는 전역변수로 쓰임
 console.log('======== 블록 스코프 =========')
 console.log('======== var =========')
 var temp1 = 94;{
