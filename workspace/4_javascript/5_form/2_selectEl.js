@@ -3,6 +3,7 @@ function check(event){
     // submit의 기능을 중지시킨다
     event.preventDefault() // 태그에 이미 있는 동작 중지
 
+    // value로 폼 안에 입력된 값을 가져온다.
     let uname  = document.loginForm.uname.value
     let age  = document.loginForm.age.value
     let gender  = document.loginForm.gender.value
@@ -26,6 +27,7 @@ function check(event){
     alert('전송 완료')
     // 값이 제대로 들어갔는지 확인할 때 사용
     alert(uname)
+    // 작성된 로그인폼 submit하는 함수
     document.loginForm.submit()
     return true;
 }

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addEventListener</title>
+</head>
+<body>
+    <button>클릭</button>
+    <button onclick=history.back()>뒤로가기</button>
+</body>
+<script>
+    /* 이게 표준방식! */
+    const btnEl = document.querySelector('button')
+    /* on만 빼고 이벤트를 인수로 넣어주면 된다 */
+    btnEl.addEventListener('click', ()=>{
+        alert('클릭!')
+    })
+</script>
+</html>

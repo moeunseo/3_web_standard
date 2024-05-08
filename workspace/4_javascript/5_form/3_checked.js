@@ -3,7 +3,6 @@ let boxs = document.fruits.querySelectorAll("[type='checkbox']")
 boxs[1].checked = true
 boxs[3].checked = true
 
-// 콜백함수
 boxs.forEach((box) =>{
     if(box.checked === true){
         console.log(box.value)

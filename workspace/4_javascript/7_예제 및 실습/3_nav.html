@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네비게이션바 실습</title>
+    <link rel="stylesheet" href="3_nav.css">
+</head>
+<body>
+    <nav id="nav">올리면 메뉴가 나옵니다.</nav>
+    <div id="dropdownContainer">
+        <div class="dropdownItem">수강신청</div>
+        <div class="dropdownItem">강의목록</div>
+        <div class="dropdownItem">강사 소개</div>
+        <div class="dropdownItem">오시는 길</div>
+    </div>
+</body>
+<script>
+    // 사용할 노드 선택
+    let nav = document.getElementById('nav')
+    let dropdownContainer = document.getElementById('dropdownContainer')
+
+    // nav 위로 마우스를 올릴 때 드롭다운 메뉴 보이기
+    nav.addEventListener('mouseover', ()=>{
+        dropdownContainer.style.display = 'block'
+    })
+
+    // 드롭다운 컨테이너로 마우스가 올라가면 계속 block 상태 유지
+    // dropdownContainer.addEventListener('mouseover', ()=>{
+    //     dropdownContainer.style.display = 'block'
+    // })
+
+    // 마우스가 드롭다운 컨테이너 밖으로 메뉴 감추기
+    dropdownContainer.addEventListener('mouseleave', ()=>{
+        dropdownContainer.style.display = 'none'
+    })
+
+    // 마우스가 nav 밖으로 메뉴 감추기
+    nav.addEventListener('mouseleave', ()=>{
+        /* 0.2초뒤에 메뉴바를 사라지게 하기 위한 콜백함수 */
+        setTimeout(function(){
+            if(!dropdownContainer.matches(':hover')){
+            dropdownContainer.style.display = 'none'
+        }
+        }, 200)
+    })
+</script>
+</html>
