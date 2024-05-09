@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slide banner test</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .slider {
+            width: 600px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slides {
+            display: flex;
+            /*transition: transform 0.5s ease-in-out;*/
+            transition-property: transform;
+            transition-duration: 0.5s;
+            transition-timing-function: ease-in-out;
+
+            /* 기준을 왼쪽으로 끌어오는 것이니 - 가 맞다. */
+            /* transform: translateX(-100%); */
+        }
+
+
+        .slide {
+            min-width: 100%;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            background-size: contain;
+            display: block;
+            border-radius: 10px;
+        }
+
+        .btn {
+            position: absolute;
+            top: 50%;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: white;
+            font-weight: bolder;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 50%;
+        }
+
+        .prev-btn {
+            left: 10px;
+        }
+
+        .next-btn {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slides">
+            <div class="slide">
+                <img src="../../images/오메가몬.jpg" alt="slide1">
+            </div>
+            <div class="slide">
+                <img src="../../images/한강.jpg" alt="slide2">
+            </div>
+            <div class="slide">
+                <img src="../../images/류호근강사.jpg" alt="slide3">
+            </div>
+        </div>
+        <button class="btn prev-btn"><</button>
+        <button class="btn next-btn">></button>
+    </div>
+</body>
+<script>
+    // 변수는 웬만하면 다 선언해주자!
+    let curr = 0 // 사진 인덱스 번호 부여
+    let imgs = document.querySelectorAll('.slide')
+    let total = imgs.length
+    let slideContainer = document.querySelector('.slides')
+    let inter
+    let intervalTime = 2000
+
+    // 콜백함수로 실행해보자!
+    // 아래에 따로 함수를 정의해보자.
+    document.querySelector('.prev-btn').addEventListener('click', showPrevSlide)
+    document.querySelector('.next-btn').addEventListener('click', showNextSlide)
+
+    function showNextSlide(){
+        curr = (curr === total-1) ? 0 : curr + 1 
+        updateSlde()
+    }
+
+    function showPrevSlide(){
+        curr = (curr === 0) ? total-1 : curr - 1 
+        updateSlde()
+    }
+
+    function updateSlde(){
+        slideContainer.style.transform = 'translateX(' + (-curr*100) + '%)'
+        // 동시에 넘어가는 것을 막기 위한 함수
+        clearInterval(inter)
+        startInterval()
+    }
+
+    function startInterval(){
+        // 콜백함수니 함수를 매개변수로 넘겨준다!
+        inter = setInterval(showNextSlide, intervalTime)
+    }
+
+    function stopInterval(){
+        clearInterval(inter)
+    }
+
+    // 페이지가 로드되면 바로 실행된다.
+    startInterval()
+
+    // 마우스를 이미지 위에 올리면 멈추고
+    // 떼면 넘어가는 함수!
+    slideContainer.addEventListener('mouseover', stopInterval)
+    slideContainer.addEventListener('mouseout', startInterval)
+</script>
+</html>
