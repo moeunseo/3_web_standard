@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>study test</title>
+</head>
+<body>
+    <div>
+        <h1>회원가입</h1>
+        <form action="#" name="joinForm">
+            <label for="id">
+                아이디: <input type="text" v-model="id" id="ID" name="id" placeholder="ID">
+            </label>
+            <br>
+            <label>
+                비밀번호: <input type="password" v-model="pw" id="PW" name="pw" placeholder="PW">
+            </label>
+            <br>
+            <label for="gender">
+                <input type="radio" class="gender" v-model="gender" name="gender" value="남자"> 남자
+                <input type="radio" class="gender" v-model="gender" name="gender" value="여자"> 여자
+            </label>
+            <br>
+            <label for="checkbox">
+                이메일 수신 동의
+                <input type="checkbox" v-model="agree" id="agree" value="y"> 동의합니다.
+            </label>
+            <br>
+            <button type="button" id="join-btn">제출하기</button>
+        </form>
+    </div>
+</body>
+<script>
+    let loginBtn = document.getElementById('join-btn')
+    let id = document.getElementById('ID')
+    let pw = document.getElementById('PW')
+    let gender = document.getElementsByClassName('gender')
+    let agreeStatus = document.getElementById('agree')
+    let genderStatus = null
+    
+    function joinCheck(){
+        // class 선택자를 가지면 여러 개의 값이기 때문에 for문을 돌려야한다!
+        let genderList = document.getElementsByName('gender')
+        genderList.forEach((element) => {
+        if(element.checked){
+            genderStatus = element.value
+        }
+       })
+
+       if(id.value === ''){
+              alert('아이디를 입력해주세요')
+              id.focus()
+        }
+        else if(pw.value === ''){
+              alert('비밀번호를 입력해주세요')
+              pw.focus
+        }
+        else if(genderStatus === null){
+            alert('성별을 골라주세요')
+        }
+        else{
+            alert('회원가입 완료')
+        }
+
+        // 이메일 수신 동의 여부
+        // 체크를 하지 않았다면
+        if(!agreeStatus.checked){
+            agreeStatus.value = 'n'
+        }
+    }
+    // 제출하기 버튼
+    // 창을 넘어가지 않게 하는 건,, 다음에 해보기!
+    loginBtn.addEventListener('click', joinCheck)
+</script>
+</html>
